@@ -1,6 +1,6 @@
 Summary of Software Design Principles
 
-Here are some important software design principles to highly consider when writing code:
+Here are some important software design principles to highly consider when writing software code:
 
 1. Complexity is incremental: you have to sweat the small stuff.
 2. Working code isn’t enough.
