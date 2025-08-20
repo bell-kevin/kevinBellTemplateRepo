@@ -1,6 +1,6 @@
 Summary of Software Design Principles
 
-Here are the most important software design principles discussed:
+Here are some important software design principles to highly consider when writing code:
 
 1. Complexity is incremental: you have to sweat the small stuff.
 2. Working code isn’t enough.
@@ -23,9 +23,7 @@ features.
 
 Summary of Red Flags
 
-Here are a few of of the most important red flags discussed. The
-presence of any of these symptoms in a system suggests that there is a problem
-with the system’s design:
+Here are a few of the most important red flags. The presence of any of these symptoms in a system suggests that there is a problem with the system’s design:
 
 Shallow Module: the interface for a class or method isn’t much simpler than its
 implementation.
