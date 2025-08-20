@@ -5,7 +5,7 @@ Here are some important software design principles to highly consider when writi
 1. Complexity is incremental: you have to sweat the small stuff.
 2. Working code isn’t enough.
 3. Make continual small investments to improve system design.
-4. Modules should be deep
+4. Modules (classes) should be deep
 5. Interfaces should be designed to make the most common usage as simple as
 possible.
 6. It’s more important for a module to have a simple interface than a simple
