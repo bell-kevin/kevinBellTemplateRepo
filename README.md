@@ -25,3 +25,18 @@ code in Copilot.
 ![Logo of the GiveUpGitHub campaign](https://sfconservancy.org/img/GiveUpGitHub.png)
 
 <p align="right"><a href="#readme-top">back to top</a></p>
+
+## Automated architecture diagram
+
+This template now includes an automated architecture diagram process:
+
+- `scripts/generate_architecture_diagram.py` scans source files and docs and writes `docs/architecture.mmd`.
+- `.github/workflows/update-architecture-diagram.yml` regenerates and commits `docs/architecture.mmd` on every push.
+- `.github/workflows/check-architecture-diagram.yml` ensures pull requests have an up-to-date architecture diagram.
+
+### Local usage
+
+```bash
+python scripts/generate_architecture_diagram.py
+python scripts/generate_architecture_diagram.py --check
+```
