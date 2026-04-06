@@ -78,7 +78,7 @@ def safe_read(path: Path) -> str:
 
 
 def iter_repo_files(root: Path) -> Iterable[Path]:
-    for path in root.rglob("*"):
+    for path in sorted(root.rglob("*")):
         if path.is_file() and not should_skip(path.relative_to(root)):
             yield path
 
