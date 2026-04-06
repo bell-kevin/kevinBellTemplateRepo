@@ -138,9 +138,8 @@ def build_diagram(files: list[FileInfo], docs: list[Path], deps: Counter[tuple[s
         node = sanitize_node_id(component)
         component_files = by_component[component]
         lang_counts = Counter(f.language for f in component_files)
-        summary = ", ".join(
-            f"{lang}:{count}" for lang, count in lang_counts.most_common(2)
-        )
+        top_languages = sorted(lang_counts.items(), key=lambda item: (-item[1], item[0]))[:2]
+        summary = ", ".join(f"{lang}:{count}" for lang, count in top_languages)
         label = f"{component}\\n{len(component_files)} files\\n{summary or 'mixed'}"
         lines.append(f"    {node}[\"{label}\"]")
         lines.append(f"    repo --> {node}")
